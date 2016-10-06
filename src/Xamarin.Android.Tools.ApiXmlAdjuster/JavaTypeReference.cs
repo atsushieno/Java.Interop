@@ -16,7 +16,7 @@ namespace Xamarin.Android.Tools.ApiXmlAdjuster
 		public static readonly JavaTypeReference Float;
 		public static readonly JavaTypeReference Double;
 		public static readonly JavaTypeReference GenericWildcard;
-		
+
 		internal static JavaTypeReference GetSpecialType (string name)
 		{
 			switch (name) {
@@ -91,7 +91,7 @@ namespace Xamarin.Android.Tools.ApiXmlAdjuster
 			if (SpecialName != null)
 				return SpecialName;
 			else if (ReferencedTypeParameter != null)
-				return ReferencedTypeParameter.Name;
+				return ReferencedTypeParameter.ToString ();
 			else
 				return string.Format ("{0}{1}{2}{3}{4}",
 					ReferencedType.Parent.Name,
